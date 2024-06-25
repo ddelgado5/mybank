@@ -1,0 +1,21 @@
+server:
+  port: 8082
+  error:
+    include-binding-errors: always
+    include-stacktrace: never
+    include-exception: true
+    include-message: always
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/basedatos
+    username: root
+    password: admin
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
